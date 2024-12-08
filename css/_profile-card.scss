@@ -1,0 +1,68 @@
+.profile-card {
+  background-color: $grey-800;
+  width: 20rem;
+  border-radius: $border-radius-md;
+  padding: $padding-md $padding-sm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //for 1024px and above
+  @media screen and (min-width: 64em) {
+    width: 23.75rem;
+    padding: $padding-lg;
+  }
+
+  img{
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: $margin-lg;
+  }
+
+  &__name{
+      font-size: $font-size-lg;
+      font-weight: $font-weight-lg;
+      color: $white;
+      margin-bottom: $margin-sm;
+  }
+
+  &__location {
+    color: $green;
+    font-size: $font-size-md;
+    margin-bottom: $margin-lg;
+  }
+
+  &__description {
+    color: $white;
+    font-weight: $font-weight-sm;
+    margin-bottom: $margin-md;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    width: 100%;
+
+    .link {
+      display: block;
+      background-color: $grey-700;
+      padding: $padding-xsm 0;
+      border-radius: $border-radius-sm;
+      text-align: center;
+      color: $white;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-color: $green;
+        color: $grey-800;
+      }
+    }
+
+  }
+
+}
